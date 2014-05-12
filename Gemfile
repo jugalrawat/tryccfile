@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rspec', :require => 'spec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'active_merchant_ccavenue' 
+
+require 'rubygems' 
+require 'bundler/setup'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -37,5 +40,9 @@ gem 'active_merchant_ccavenue'
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+
+
+
+
 gem 'ccavenue', '~> 0.0.2'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

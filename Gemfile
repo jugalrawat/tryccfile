@@ -44,3 +44,9 @@ require 'bundler/setup'
 
 gem 'ccavenue', '~> 0.0.2'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+group :development, :test do
+  gem 'rspec', '>=2.0.1'
+  gem 'rspec-rails', '>=2.0.1'
+  gem 'webrat'
+  gem 'factory_girl_rails', '1.0'
+end

@@ -1,0 +1,20 @@
+
+
+<p> payment gateway </p>
+<script type="text/javascript">
+
+$(function() {
+
+  $('#redirect').submit();
+
+});
+
+</script>
+
+<form id="redirect" method="post" name="redirect" action="http://www.ccavenue.com/shopzone/cc_details.jsp">
+
+<input type=hidden name=encRequest value=<%=@encRequest%>”>
+
+<input type=hidden name=Merchant_Id value= 'M_demo1_1828'>
+
+</form>

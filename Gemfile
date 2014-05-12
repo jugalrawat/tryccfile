@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rspec', :require => 'spec'
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
@@ -22,7 +24,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',  group: :doc
-
+#gem 'spork', '~> 1.0rc'
 gem 'active_merchant_ccavenue' 
 
 require 'rubygems' 
@@ -33,6 +35,7 @@ require 'bundler/setup'
 # Use unicorn as the app server
 # gem 'unicorn'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -40,6 +43,8 @@ require 'bundler/setup'
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+
+
 
 
 gem 'ccavenue', '~> 0.0.2'

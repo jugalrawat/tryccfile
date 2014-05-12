@@ -31,7 +31,7 @@ class HomeController < ApplicationController
 
       "Order_Id="+orderID+"&"+
 
-      "Redirect_Url="+redirectURL+"&"+
+		"Redirect_Url="+redirectURL+"&"+
 
       "billing_cust_name="+name+"&"+
 

@@ -3,6 +3,7 @@
 <p> payment gateway </p>
 <script type="text/javascript">
 
+//$( "#btn" ).click(function() {
 $(function() {
 
   $('#redirect').submit();
@@ -16,5 +17,6 @@ $(function() {
 <input type=hidden name=encRequest value=<%=@encRequest%>”>
 
 <input type=hidden name=Merchant_Id value= 'M_demo1_1828'>
+<input type="submit" id="btn" /> 
 
 </form>

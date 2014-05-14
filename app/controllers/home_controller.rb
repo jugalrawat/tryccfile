@@ -3,9 +3,9 @@ class HomeController < ApplicationController
   def index
    
     # @ccavenue = Entry.all
-   orderID = 22223.to_s
+   orderID = 56789.to_s
 
-    amount = 1.to_s
+    amount = 01.to_s
     
     name = 'test'
     street_address = 'A39'
@@ -17,9 +17,23 @@ class HomeController < ApplicationController
     city ='jaipur'
     pincode = 302022
     
+   #  orderID = to_query('orderID').to_s
+
+   # amount = to_query('amount')
+    
+  #  name = to_query('name')
+   # street_address = to_query('street_address')
+  #  country = to_query('country')
+  #  cell_phone = to_query('cell_phone')
+    
+   # email = to_query('email')
+  #  state = to_query('state')
+   # current_user_name = to_query('current_user_name')
+   # city =to_query('city')
+   # pincode = to_query('pincode')
     
 
-    redirectURL = "http://ccavenue1.herokuapp.com/transactions/"+22223.to_s+"/ccavenue_redirect"
+     redirectURL = "http://real.hostingcentre.in/ruby/test.php/transactions/"+56789.to_s+"/ccavenue_redirect"
 
     checksum = getChecksum("M_demo1_1828", orderID, amount, redirectURL, "ekvb7aezafo9r38ikfdfzrvy6srsl8st")
 
@@ -93,9 +107,9 @@ class HomeController < ApplicationController
 
             if @encResponse
 
-        Dir.chdir("#{RAILS_ROOT}/public/jars/") do
+        Dir.chdir("c:/Sites/rails_projects/ccavenue/public/jar/") do
 
-               @ccaResponse = %x[java -jar ravi-ccavutil.jar #{CCAVENUE_WORKING_KEY} "#{@encResponse}" dec]
+               @ccaResponse = %x[java -jar ravi-ccavutil.jar #{'ekvb7aezafo9r38ikfdfzrvy6srsl8st'} "#{@encResponse}" dec]
 
         end
 
@@ -103,7 +117,7 @@ class HomeController < ApplicationController
 
         if (!@p.nil? && @p["Merchant_Id"] && @p["Order_Id"] && @p["Amount"] && @p["AuthDesc"] && @p["Checksum"])
 
-          @checksum = verifyChecksum(@p["Merchant_Id"], @p["Order_Id"], @p["Amount"], @p["AuthDesc"], CCAVENUE_WORKING_KEY, @p["Checksum"])
+          @checksum = verifyChecksum(@p["Merchant_Id"], @p["Order_Id"], @p["Amount"], @p["AuthDesc"], 'ekvb7aezafo9r38ikfdfzrvy6srsl8st', @p["Checksum"])
 
           @authDesc = @p["AuthDesc"].eql?("Y") ? true : false
 

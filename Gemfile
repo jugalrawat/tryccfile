@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-
+ruby '1.9.3'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -27,8 +28,12 @@ gem 'sdoc', '~> 0.4.0',  group: :doc
 #gem 'spork', '~> 1.0rc'
 gem 'active_merchant_ccavenue' 
 
+
+
 require 'rubygems' 
+require 'rubygems/gem_runner'
 require 'bundler/setup'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,7 +51,11 @@ require 'bundler/setup'
 
 
 
+#gem 'rspec', '2.14.1'
 
+
+
+gem 'therubyracer', platforms: :ruby
 gem 'ccavenue', '~> 0.0.2'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
